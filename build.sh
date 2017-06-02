@@ -13,7 +13,7 @@ tar -xvzf ${OPENSSL}.tar.gz
 mv *.gz /${TARGET_DIR}/archives
 mkdir -p /${TARGET_DIR}/apps
 cd ${OPENSSL}
-./config --prefix=/${OPENSSL_PATH} no-threads shared 
+./config --prefix=/${OPENSSL_PATH} no-threads 
 echo "Building OPENSSL" >> .build.log
 make clean
 make test
