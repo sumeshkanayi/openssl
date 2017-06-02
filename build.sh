@@ -1,4 +1,8 @@
-#strings mod_ssl.so | grep -i openssl
+#-----------------Usage----------------------
+# sudo -i
+# sh builld.sh
+# strings /usr/apache2/modules/mod_ssl.so | grep -i openssl
+#-----------------Usage----------------------
 yum -y install wget perl gcc httpd git
 TARGET_DIR="build"
 mkdir -p /${TARGET_DIR}/archives
