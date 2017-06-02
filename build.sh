@@ -2,6 +2,7 @@
 yum -y install wget perl gcc httpd git
 TARGET_DIR="build"
 mkdir -p /${TARGET_DIR}/archives
+OPENSSL_PATH="/usr/openSSL1.0.2"
 OPENSSL="openssl-1.0.2k"
 PCRE="8.35"
 cd /${TARGET_DIR}
@@ -12,7 +13,7 @@ tar -xvzf ${OPENSSL}.tar.gz
 mv *.gz /${TARGET_DIR}/archives
 mkdir -p /${TARGET_DIR}/apps
 cd ${OPENSSL}
-./config --prefix=/usr no-threads shared 
+./config --prefix=/${OPENSSL_PATH} no-threads shared 
 make clean
 make test
 make install
@@ -45,7 +46,7 @@ make clean && make install
 
 cd /${TARGET_DIR}/httpd-2.4.25/
 
-./configure --prefix=/usr/apache --with-ssl=/usr/local/ssl --enable-ssl=shared --enable-mods-shared=all --with-expat=builtin --with-included-apr --with-pcre=/${TARGET_DIR}/pcre/bin/pcre-config 
+./configure --prefix=/usr/apache --with-ssl=/${OPENSSL_PATH}/ssl --enable-ssl=shared --enable-mods-shared=all --with-expat=builtin --with-included-apr --with-pcre=/${TARGET_DIR}/pcre/bin/pcre-config 
 
 
 make && make install
