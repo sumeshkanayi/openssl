@@ -2,7 +2,7 @@
 yum -y install wget perl gcc httpd git
 TARGET_DIR="build"
 mkdir -p /${TARGET_DIR}/archives
-OPENSSL_PATH="/usr/openSSL1.0.2"
+OPENSSL_PATH="/usr"
 OPENSSL="openssl-1.0.2k"
 PCRE="8.35"
 cd /${TARGET_DIR}
@@ -13,7 +13,7 @@ tar -xvzf ${OPENSSL}.tar.gz
 mv *.gz /${TARGET_DIR}/archives
 mkdir -p /${TARGET_DIR}/apps
 cd ${OPENSSL}
-./config --prefix=/${OPENSSL_PATH} no-threads 
+./config --prefix=/${OPENSSL_PATH} no-threads shared
 echo "Building OPENSSL" >> .build.log
 make clean
 make test
