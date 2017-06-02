@@ -1,6 +1,6 @@
 #strings mod_ssl.so | grep -i openssl
 yum -y install wget perl gcc httpd git
-TARGET_DIR="/build"
+TARGET_DIR="build"
 mkdir -p /${TARGET_DIR}/archives
 OPENSSL="openssl-1.0.2k"
 PCRE="8.35"
