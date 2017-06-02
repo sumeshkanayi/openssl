@@ -57,6 +57,8 @@ make clean && make install
 cd /${TARGET_DIR}/httpd-2.4.25/
 
 echo "Building httpd" >> .build.log
+
+echo "present ir is $(pwd)" >> /tmp/build.log
 ./configure --prefix=/usr/apache --with-ssl=${OPENSSL_PATH}/ssl --enable-ssl=shared --enable-mods-shared=all --with-expat=builtin --with-included-apr --with-pcre=/${TARGET_DIR}/pcre/bin/pcre-config 
 
 
