@@ -45,10 +45,6 @@ make clean && make install
 
 cd /${TARGET_DIR}/httpd-2.4.25/
 
-#./configure --prefix=/opt/apache2 --enable-pie --enable-mods-shared=all --enable-so --disable-include --enable-deflate --enable-headers --enable-expires --enable-ssl=shared --enable-mpms-shared=all --with-mpm=event --enable-rewrite --enable-module=ssl --enable-fcgid --with-pcre=/${TARGET_DIR}/pcre/bin/pcre-config --with-ssl=/usr/local/ssl  
-
-
-
 ./configure --prefix=/usr/apache --with-ssl=/usr/local/ssl --enable-ssl=shared --enable-mods-shared=all --with-expat=builtin --with-included-apr --with-pcre=/${TARGET_DIR}/pcre/bin/pcre-config 
 
 
