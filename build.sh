@@ -48,6 +48,7 @@ yum install gcc-c++ zlib-devel -y
 
 echo "Installing GCC" >> .build.log
 cd /${TARGET_DIR}/pcre-8.35
+echo "Present working directory $(pwd)"
 ./configure --prefix /${TARGET_DIR}/pcre
 
 echo "Building pcre" >> .build.log
