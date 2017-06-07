@@ -1,9 +1,13 @@
 #-----------------Usage----------------------
 # sudo -i
+# yum remove httpd
+
 # sh builld.sh
 # strings /usr/apache2/modules/mod_ssl.so | grep -i openssl
 #-----------------Usage----------------------
-yum -y install wget perl gcc httpd git
+yum -y remove httpd
+rm -rf /etc/httpd
+yum -y install wget perl gcc git
 TARGET_DIR="build"
 mkdir -p /${TARGET_DIR}/archives
 OPENSSL_PATH="/usr"
@@ -63,7 +67,7 @@ cd /${TARGET_DIR}/httpd-2.4.25/
 echo "Building httpd" >> .build.log
 
 echo "present ir is $(pwd)" >> /tmp/build.log
-./configure --prefix=/usr/apache2 --with-ssl=${OPENSSL_PATH}/ssl --enable-ssl=shared --enable-mods-shared=all --with-expat=builtin --with-included-apr --with-pcre=/${TARGET_DIR}/pcre/bin/pcre-config 
+./configure --prefix=/etc/httpd --with-ssl=${OPENSSL_PATH}/ssl --enable-ssl=shared --enable-mods-shared=all --with-expat=builtin --with-included-apr --with-pcre=/${TARGET_DIR}/pcre/bin/pcre-config 
 
 
 make && make install
