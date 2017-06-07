@@ -1,7 +1,5 @@
 #-----------------Usage----------------------
 # sudo -i
-# yum remove httpd
-
 # sh builld.sh
 # strings /usr/apache2/modules/mod_ssl.so | grep -i openssl
 #-----------------Usage----------------------
