@@ -1,12 +1,14 @@
 #-----------------Usage----------------------
 # sudo -i
 # sh builld.sh
-# strings /usr/apache2/modules/mod_ssl.so | grep -i openssl
+# strings /etc/httpd/modules/mod_ssl.so | grep -i openssl
 #-----------------Usage----------------------
 yum -y remove httpd
 rm -rf /etc/httpd
+rm -rf /usr/apache2
 yum -y install wget perl gcc git
 TARGET_DIR="build"
+rm -rf /${TARGET_DIR}
 mkdir -p /${TARGET_DIR}/archives
 OPENSSL_PATH="/usr"
 OPENSSL="openssl-1.0.2k"
