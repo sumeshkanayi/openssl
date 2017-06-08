@@ -3,9 +3,7 @@
 # sh builld.sh
 # strings /etc/httpd/modules/mod_ssl.so | grep -i openssl
 #-----------------Usage----------------------
-yum -y remove httpd
-rm -rf /etc/httpd
-rm -rf /usr/apache2
+echo "Do you want to delete exist
 yum -y install wget perl gcc git
 TARGET_DIR="build"
 rm -rf /${TARGET_DIR}
