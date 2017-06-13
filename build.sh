@@ -6,7 +6,9 @@
 echo "Do you want to delete exist"
 yum -y install wget perl gcc git
 TARGET_DIR="build"
+if [ -d $TARGET_DIR ]; then
 rm -rf /${TARGET_DIR}
+fi
 mkdir -p /${TARGET_DIR}/archives
 OPENSSL_PATH="/usr"
 OPENSSL="openssl-1.0.2k"
