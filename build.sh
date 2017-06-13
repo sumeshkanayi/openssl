@@ -3,7 +3,7 @@
 # sh builld.sh
 # strings /etc/httpd/modules/mod_ssl.so | grep -i openssl
 #-----------------Usage----------------------
-echo "Do you want to delete exist
+echo "Do you want to delete exist"
 yum -y install wget perl gcc git
 TARGET_DIR="build"
 rm -rf /${TARGET_DIR}
