@@ -1,3 +1,17 @@
-https://hesip.com/post/build-http-server-with-http2-support/
+
+create a directory /build on the target server
+
+1)scp /etc/apache2 from source to /etc
+
+2)scp /etc/httpd from source to /build
+
+3)scp /var/www to /build
+
+4)scp /home/svn to /home
+
+5)scp /etc/subversion to /etc
+
+
+#https://hesip.com/post/build-http-server-with-http2-support/
 
 
