@@ -20,7 +20,8 @@ mkdir -p /var/log/apache2
 touch /etc/mime.types
 
 #add sed here 
-mv /etc/httpd/conf.modules.d/00-systemd.conf /etc/httpd/conf.modules.d/00-systemd.conf_backup
+
+
 mv /etc/httpd/conf.d/ssl.conf /etc/httpd/conf.d/ssl.conf_backup
 
 yum -y install mod_dav_svn
@@ -45,7 +46,7 @@ echo "LoadModule log_config_module modules/mod_log_config.so" >> /etc/httpd/conf
 
 echo "Listen 443" >> /etc/httpd/conf/httpd.conf
 
-
+mv /etc/httpd/conf.modules.d/00-systemd.conf /etc/httpd/conf.modules.d/00-systemd.conf_backup
 
 
 
