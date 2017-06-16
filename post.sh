@@ -36,6 +36,7 @@ yum -y install mod_dav_svn
 
 echo "LoadModule dav_svn_module    /usr/lib64/httpd/modules/mod_dav_svn.so" >> /etc/httpd/conf.modules.d/10-subversion.conf
 echo "LoadModule authz_svn_module   /usr/lib64/httpd/modules/mod_authz_svn.so" >> /etc/httpd/conf.modules.d/10-subversion.conf
+
 echo "# ADDING Missing modules" >> /etc/httpd/conf.modules.d/00-base.conf
 echo "LoadModule authz_host_module modules/mod_authz_host.so" >> /etc/httpd/conf.modules.d/00-base.conf
 echo "LoadModule authz_host_module modules/mod_access_compat.so" >> /etc/httpd/conf.modules.d/00-base.conf
@@ -46,6 +47,8 @@ echo "LoadModule deflate_module modules/mod_deflate.so" >> /etc/httpd/conf.modul
 echo "LoadModule dumpio_module modules/mod_dumpio.so" >> /etc/httpd/conf.modules.d/00-base.conf
 echo "LoadModule headers_module modules/mod_headers.so" >> /etc/httpd/conf.modules.d/00-base.conf
 echo "LoadModule log_config_module modules/mod_log_config.so" >> /etc/httpd/conf.modules.d/00-base.conf
+
+echo "Listen 443" >> /etc/httpd/conf/httpd.conf
 
 
 
