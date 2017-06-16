@@ -29,7 +29,7 @@ touch /etc/mime.types
 
 rm /etc/httpd/conf.modules.d/10-subversion.conf
 #add sed here
-#mv /etc/httpd/conf.modules.d/00-systemd.conf /etc/httpd/conf.modules.d/00-systemd.conf
+mv /etc/httpd/conf.modules.d/00-systemd.conf /etc/httpd/conf.modules.d/00-systemd.conf_backup
 mv /etc/httpd/conf.d/ssl.conf /etc/httpd/conf.d/ssl.conf_backup
 
 yum -y install mod_dav_svn
