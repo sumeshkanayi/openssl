@@ -37,5 +37,6 @@ LoadModule log_config_module modules/mod_log_config.so
 2)comment #LoadModule mpm_prefork_module modules/mod_mpm_prefork.so /etc/httpd/conf.modules.d/00-mpm.conf
 3)Comment line under /etc/httpd/conf.modules.d/00-systemd.conf
 
+https://hesip.com/post/build-http-server-with-http2-support/
 
 
