@@ -1,7 +1,7 @@
 source_httpd="/source/httpd"
 source_apache2="/source/apache2"
 var_www="/source/www"
-subversion_conf="/build/subversion"
+subversion_conf="/source/subversion"
 mv  /etc/httpd/conf /etc/httpd/conf_backup
 cp -r "${source_httpd}/conf" /etc/httpd
 cp -r "${var_www}" /var
@@ -11,7 +11,7 @@ cp -r "${source_httpd}/conf.modules.d" /etc/httpd
 cp -r "${source_httpd}/conf.d" /etc/httpd
 cp ${subversion_conf}/*.* /etc/subversion
 
-groupadd -G apache
+groupadd apache
 sudo useradd -d /var/www/html -g apache apache
 mkdir -p /var/log/apache2
 
