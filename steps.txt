@@ -30,7 +30,7 @@ LoadModule log_config_module modules/mod_log_config.so
 
 #Donot try this
 1)sslEngine on should be removed 
-2)create group apache ,create a new user apache and add the user to it
+2)create group apache ,create a new user apache and add the user to it home directory should be /var/www
 
 
 
