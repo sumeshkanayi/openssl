@@ -23,9 +23,10 @@ mv /etc/httpd/conf.modules.d/10-subversion.conf /etc/httpd/conf.modules.d/10-sub
 mv /etc/httpd/conf.modules.d/00-systemd.conf /etc/httpd/conf.modules.d/00-systemd.conf_backup
 mv /etc/httpd/conf.d/ssl.conf /etc/httpd/conf.d/ssl.conf_backup
 
-#touch mime.types ,try to copy it 
+#touch mime.types ,try to copy it  from existing directory
 
 touch /etc/mime.types
 
+yum -y install mod_dav_svn
 
 
