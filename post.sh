@@ -24,15 +24,17 @@ mkdir -p /var/log/apache2
 touch /etc/mime.types
 
 
-#disable svn.conf
 
 
-rm /etc/httpd/conf.modules.d/10-subversion.conf
 #add sed here
 mv /etc/httpd/conf.modules.d/00-systemd.conf /etc/httpd/conf.modules.d/00-systemd.conf_backup
 mv /etc/httpd/conf.d/ssl.conf /etc/httpd/conf.d/ssl.conf_backup
 
 yum -y install mod_dav_svn
+
+#disable svn.conf
+
+mv /etc/httpd/conf.modules.d/10-subversion.conf /etc/httpd/conf.modules.d/10-subversion.conf_backup
 
 echo "LoadModule dav_svn_module    /usr/lib64/httpd/modules/mod_dav_svn.so" >> /etc/httpd/conf.modules.d/10-subversion.conf
 echo "LoadModule authz_svn_module   /usr/lib64/httpd/modules/mod_authz_svn.so" >> /etc/httpd/conf.modules.d/10-subversion.conf
