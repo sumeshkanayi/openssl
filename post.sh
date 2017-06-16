@@ -10,8 +10,11 @@ mkdir -p /var/www/html
 echo "<p>"Hello world"</p>" > /var/www/html/index.html
 echo "<p>"Hello world "</p>" > /var/www/index.html
 
-
 fi
+
+#disable svn.conf
+
+mv /etc/httpd/sites-enabled/svn.conf /etc/httpd/sites-enabled/svn.conf_backup
 
 
 
