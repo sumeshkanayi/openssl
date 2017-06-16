@@ -33,6 +33,8 @@ LoadModule log_config_module modules/mod_log_config.so
 2)create group apache ,create a new user apache and add the user to it home directory should be /var/www
 3)may need to copy mime.types to /etc
 
+1)comment mod_suexec.so from /etc/httpd/conf.modules.d/00-base.conf
+2)comment #LoadModule mpm_prefork_module modules/mod_mpm_prefork.so /etc/httpd/conf.modules.d/00-mpm.conf
 
 
 
