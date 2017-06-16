@@ -1,6 +1,6 @@
-source_httpd="/build/httpd"
-source_apache2="/build/apache2"
-var_www="/build/www"
+source_httpd="/source/httpd"
+source_apache2="/source/apache2"
+var_www="/source/www"
 subversion_conf="/build/subversion"
 mv  /etc/httpd/conf /etc/httpd/conf_backup
 cp -r "${source_httpd}/conf" /etc/httpd
