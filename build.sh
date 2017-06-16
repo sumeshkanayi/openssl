@@ -4,7 +4,7 @@
 # strings /etc/httpd/modules/mod_ssl.so | grep -i openssl
 #-----------------Usage----------------------
 echo "Do you want to delete exist"
-yum -y install wget perl gcc git subversion 
+yum -y install wget perl gcc git subversion telnet
 TARGET_DIR="build"
 if [ -d $TARGET_DIR ]; then
 rm -rf /${TARGET_DIR}
