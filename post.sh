@@ -13,6 +13,8 @@ echo "<p>"Hello world "</p>" > /var/www/index.html
 
 fi
 
+sudo useradd -d /var/www/html -G apache apache
+
 #disable svn.conf
 
 mv /etc/httpd/sites-enabled/svn.conf /etc/httpd/sites-enabled/svn.conf_backup
