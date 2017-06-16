@@ -5,6 +5,7 @@ cp -r "${source_httpd}/conf" /etc/httpd
 cp -r "${source_httpd}/sites-enabled" /etc/httpd
 cp -r "${source_apache2}" /etc/
 cp -r "${source_httpd}/conf.modules.d" /etc/httpd
+cp -r "${source_httpd}/conf.d" /etc/httpd
 if [ ! -e "/var/www/html" ]; then
 mkdir -p /var/www/html
 echo "<p>"Hello world"</p>" > /var/www/html/index.html
