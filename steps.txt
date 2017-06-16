@@ -1,5 +1,17 @@
+1)Run build script
 
-1)#Add the below lines to httpd.conf . (You will see lot of LoaModule section , add these just below that)
+2)copy /etc/apache2 to /etc/apache2 
+
+3)copy /etc/httpd files to /tmp/
+
+4)Copy /etc/subversion content to /etc/subversion
+
+5)Make sure that right certificates are added to the ssl config file
+
+6)Make sure port 443 is added to httpd.conf file
+
+
+7)#Add the below lines to httpd.conf . (You will see lot of LoaModule section , add these just below that)
 
 LoadModule authz_host_module modules/mod_authz_host.so
 LoadModule authz_host_module modules/mod_access_compat.so 
@@ -10,6 +22,9 @@ LoadModule deflate_module modules/mod_deflate.so
 LoadModule dumpio_module modules/mod_dumpio.so
 LoadModule headers_module modules/mod_headers.so
 LoadModule log_config_module modules/mod_log_config.so
+
+8)yum install mod_dav_svn
+
 
 
 
