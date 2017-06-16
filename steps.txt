@@ -1,15 +1,15 @@
 
-create a directory /build on the target server
+create a directory /source on the target server
 
-1)scp /etc/apache2 from source to /etc
+1)scp /etc/apache2 from source to /source
 
-2)scp /etc/httpd from source to /build
+2)scp /etc/httpd from source to /source
 
-3)scp /var/www to /build
+3)scp /var/www to /source
 
 4)scp /home/svn to /home
 
-5)scp /etc/subversion to /etc
+5)scp /etc/subversion to /source
 
 
 #https://hesip.com/post/build-http-server-with-http2-support/
