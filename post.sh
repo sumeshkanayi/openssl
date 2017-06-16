@@ -4,6 +4,13 @@ mv  /etc/httpd/conf /etc/httdpd/conf_backup
 cp -r "${source_httpd}/conf" /etc/httpd
 cp -r "${source_httpd}/sites-*" /etc/httpd
 cp -r "${source_apache2}" /etc/
+if [ -d "/var/www/html" ]; then
+mkdir -p /var/www/html
+echo "<p>"Hello world"</p>" > /var/www/html/index.html
+echo "<p>"Hello world "</p>" > /var/www/index.html
+
+
+fi
 
 
 
