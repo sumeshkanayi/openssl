@@ -8,19 +8,8 @@ LoadModule authz_core_module modules/mod_authz_core.so
 LoadModule unixd_module modules/mod_unixd.so
 LoadModule deflate_module modules/mod_deflate.so
 LoadModule dumpio_module modules/mod_dumpio.so
-LoadmModule headers_module modules/mod_headers.so
-LoadmModule log_config_module modules/mod_log_config.so
+LoadModule headers_module modules/mod_headers.so
+LoadModule log_config_module modules/mod_log_config.so
 
 
 
-
-
-2)
-a)uncomment any of the configuration file where we had 'order'
-b)try stopping and starting apachectl
-3)
-if it works fine then 
-uncomment 
-allow  browsermatch user group order require etc one by one(As per the notepad file) and test it .If works fine 
-on one file then un comment on all files .If not working then keep it as commented and uncomment and test the next one .
-DONT YET TOUCH svn conf files 
