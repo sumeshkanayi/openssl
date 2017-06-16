@@ -35,6 +35,7 @@ LoadModule log_config_module modules/mod_log_config.so
 
 1)comment mod_suexec.so from /etc/httpd/conf.modules.d/00-base.conf
 2)comment #LoadModule mpm_prefork_module modules/mod_mpm_prefork.so /etc/httpd/conf.modules.d/00-mpm.conf
+3)Comment line under /etc/httpd/conf.modules.d/00-systemd.conf
 
 
 
