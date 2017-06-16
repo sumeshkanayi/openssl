@@ -1,6 +1,6 @@
 source_httpd="/vagrant/mspidea1zips/mspidea/httpd"
 source_apache2="/vagrant/mspidea1zips/mspidea/apache2"
-var_www="/vagrant/www"
+var_www="/vagrant/www/www"
 mv  /etc/httpd/conf /etc/httpd/conf_backup
 cp -r "${source_httpd}/conf" /etc/httpd
 cp -r "${var_www}" /var
@@ -28,7 +28,8 @@ touch /etc/mime.types
 
 
 rm /etc/httpd/conf.modules.d/10-subversion.conf
-mv /etc/httpd/conf.modules.d/00-systemd.conf /etc/httpd/conf.modules.d/00-systemd.conf_backup
+#add sed here
+#mv /etc/httpd/conf.modules.d/00-systemd.conf /etc/httpd/conf.modules.d/00-systemd.conf
 mv /etc/httpd/conf.d/ssl.conf /etc/httpd/conf.d/ssl.conf_backup
 
 yum -y install mod_dav_svn
