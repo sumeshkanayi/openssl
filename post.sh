@@ -16,6 +16,7 @@ fi
 
 mv /etc/httpd/sites-enabled/svn.conf /etc/httpd/sites-enabled/svn.conf_backup
 mv /etc/httpd/conf.modules.d/10-subversion.conf /etc/httpd/conf.modules.d/10-subversion.conf_backup
+mv /etc/httpd/conf.modules.d/00-systemd.conf /etc/httpd/conf.modules.d/00-systemd.conf_backup
 
 
 
