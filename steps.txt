@@ -1,6 +1,6 @@
 1)Run build script
 
-2)copy /etc/apache2 to /etc/apache2 
+2)copy /etc/apache2 to /etc/apache2  , /var/www to /var/www
 
 3)copy /etc/httpd files to /tmp/
 
