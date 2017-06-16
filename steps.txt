@@ -25,6 +25,8 @@ LoadModule log_config_module modules/mod_log_config.so
 
 8)yum install mod_dav_svn
 
+9)Make sure that /home/svn is mounted on an lvm with 40 GB space
+
 
 
 
