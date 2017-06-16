@@ -14,6 +14,7 @@ echo "<p>"Hello world "</p>" > /var/www/index.html
 fi
 groupadd -G apache
 sudo useradd -d /var/www/html -g apache apache
+mkdir -p /var/log/apache2
 
 #disable svn.conf
 
