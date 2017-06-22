@@ -54,6 +54,8 @@ echo "LoadModule log_config_module modules/mod_log_config.so" >> /etc/httpd/conf
 echo "Listen 443" >> /etc/httpd/conf/httpd.conf
 
 mv /etc/httpd/conf.modules.d/00-systemd.conf /etc/httpd/conf.modules.d/00-systemd.conf_backup
+ip=$(ip a|grep inet|grep eth1|awk '{print $2}'|sed 's;/24;;g')
+echo "$ip   idea.concur.com" >> /etc/hosts
 
 
 
