@@ -4,8 +4,8 @@ Execute buid.sh
 Make sure /source directory is intact on mspidea2(dont remove files directories from the directory) 
 scp /home/svn from mspidea to /home on the mspidea2
 execute post.sh
-add hostfile for idea.concur.com to point to mspidea2 ip on mspidea2
+add hostfile for idea.concur.com to point to mspidea2 ip on mspidea2 server
  run /etc/httpd/apachectl start
-#https://hesip.com/post/build-http-server-with-http2-support/
+
 
 
