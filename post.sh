@@ -58,4 +58,4 @@ ip=$(ip a|grep inet|grep eth1|awk '{print $2}'|sed 's;/24;;g')
 echo "$ip   idea.concur.com" >> /etc/hosts
 
 
-
+htpasswd -c /etc/subversion/svn-auth-file root
