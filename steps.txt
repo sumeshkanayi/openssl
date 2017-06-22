@@ -1,0 +1,10 @@
+Execute undo.sh
+reboot server
+Execute buid.sh
+Make sure /source directory is intact on mspidea2(dont remove files directories etcc
+scp /home/svn to /home on the target serve
+execute post.sh
+
+#https://hesip.com/post/build-http-server-with-http2-support/
+
+
