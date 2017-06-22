@@ -26,6 +26,13 @@ mv /etc/httpd/conf.d/ssl.conf /etc/httpd/conf.d/ssl.conf_backup
 
 yum -y install mod_dav_svn
 
+mkdir -p /home/svn/repositories #only for vagrant
+chown -R apache:apache /home/svn/ #only for vagrant
+svnadmin create --fs-type fsfs /home/svn/repositories/hrsystem #only for vagrant
+chown -R apache:apache /home/svn/repositories/hrsystem #only for vagrant
+chmod -R g+w /home/svn/repositories/hrsystem #only for vagrant
+chmod g+s /home/svn/repositories/hrsystem/db #only for vagrant
+
 #backup svn.conf
 
 mv /etc/httpd/conf.modules.d/10-subversion.conf /etc/httpd/conf.modules.d/10-subversion.conf_backup
