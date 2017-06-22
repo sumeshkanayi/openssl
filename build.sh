@@ -5,7 +5,7 @@
 #-----------------Usage----------------------
 echo "Do you want to delete exist"
 cp svn.repo /etc/yum.repos.d/wandisco-svn.repo #only for vagrant
-ln -s /vgranr /source #only for vagrant
+ln -s /vagrant /source #only for vagrant
 yum -y install wget perl gcc git subversion telnet
 TARGET_DIR="build"
 if [ -d $TARGET_DIR ]; then
