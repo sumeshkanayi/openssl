@@ -6,6 +6,14 @@ scp /home/svn from mspidea to /home on the mspidea2
 execute post.sh
 add hostfile for idea.concur.com to point to mspidea2 ip on mspidea2 server
  run /etc/httpd/apachectl start
+ 
+ ---------------
+#If above steps doesnt work ,then rebuild the server again for the last time and follow the below steps
+#copy /etc/httpd /etc/apache2 /var/www /etc/subversion to /source
+#copy /home/svn to /home
+#run build.sh
+#run post.sh
+
 
 
 
