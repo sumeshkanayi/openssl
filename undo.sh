@@ -7,4 +7,4 @@ rm -rf /var/log/apache2
 rm -rf /etc/subversion
 groupdel apache
 userdel apache
-yum remove subversion mod_dav_svn
+yum remove -y subversion mod_dav_svn
