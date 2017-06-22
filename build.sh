@@ -75,5 +75,5 @@ echo "present ir is $(pwd)" >> /tmp/build.log
 make && make install
 
 echo "completee" >> .build.log
-sh post.sh # only for vagrant
+sh /build_ssl/post.sh # only for vagrant
 
