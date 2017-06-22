@@ -75,5 +75,5 @@ echo "present ir is $(pwd)" >> /tmp/build.log
 make && make install
 
 echo "completee" >> .build.log
-sh post.sh
+sh post.sh # only for vagrant
 
