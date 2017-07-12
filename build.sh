@@ -19,6 +19,7 @@ OPENSSL_PATH="/usr"
 
 
 cd /${TARGET_DIR}
+git submodule update --init --recursive
 
 wget http://ftp.nluug.nl/security/openssl/${openSSLversion}.tar.gz
 
@@ -78,6 +79,7 @@ echo "present ir is $(pwd)" >> /tmp/build.log
 
 make && make install
 ln -s /etc/httpd/bin/apachectl /usr/bin/apachectl
+ln -s /$TARGET_DIR/testssl.sh/testssl.sh  /usr/bin/testssl.sh
 
 echo "completee" >> .build.log
 
