@@ -6,7 +6,7 @@
 httpdVersion="2.4.27"
 aprVersion="1.6.2"
 pcreVersion="10.23"
-openSSLversion="1.1.0f"
+openSSLversion="openssl-1.1.0f"
 
 yum -y install wget perl gcc git subversion telnet
 TARGET_DIR="build"
@@ -15,16 +15,16 @@ rm -rf /${TARGET_DIR}
 fi
 mkdir -p /${TARGET_DIR}/archives
 OPENSSL_PATH="/usr"
-OPENSSL="openssl-1.0.2k"
+
 
 cd /${TARGET_DIR}
 
-wget http://ftp.nluug.nl/security/openssl/${OPENSSL}.tar.gz
+wget http://ftp.nluug.nl/security/openssl/${openSSLversion}.tar.gz
 
-tar -xvzf ${OPENSSL}.tar.gz
+tar -xvzf ${openSSLversion}.tar.gz
 mv *.gz /${TARGET_DIR}/archives
 mkdir -p /${TARGET_DIR}/apps
-cd ${OPENSSL}
+cd ${openSSLversion}
 ./config --prefix=/${OPENSSL_PATH} no-threads shared
 echo "Building OPENSSL" >> .build.log
 make clean
