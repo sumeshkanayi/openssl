@@ -1,3 +1,5 @@
+yum -y install bind-utils
+ln -s /vagrant /source 
 source_httpd="/source/httpd"
 source_apache2="/source/apache2"
 var_www="/source/www"
