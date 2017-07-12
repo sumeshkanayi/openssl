@@ -33,18 +33,18 @@ make install
 echo "Building OPENSSL completed" >> .build.log
 
 cd /${TARGET_DIR}
-wget http://redrockdigimark.com/apachemirror//httpd/httpd-2.4.25.tar.gz
-tar -xvzf httpd-2.4.25.tar.gz
+wget "http://redrockdigimark.com/apachemirror//httpd/httpd-${httpdVersion}.tar.gz"
+tar -xvzf "httpd-{httpdVersion}.tar.gz"
 cd /${TARGET_DIR}
 wget http://redrockdigimark.com/apachemirror//apr/apr-1.5.2.tar.gz
 tar -xvzf apr-1.5.2.tar.gz
-cp -r apr-1.5.2 /${TARGET_DIR}/httpd-2.4.25/srclib/apr
+cp -r apr-1.5.2 "/${TARGET_DIR}/httpd-{httpdVersion}/srclib/apr"
 
 echo "Download and copy aprutil" >> .build.log
 
 wget http://redrockdigimark.com/apachemirror//apr/apr-util-1.5.4.tar.gz
 tar -xvzf apr-util-1.5.4.tar.gz
-cp -r apr-util-1.5.4 /${TARGET_DIR}/httpd-2.4.25/srclib/apr-util
+cp -r apr-util-1.5.4 /${TARGET_DIR}/httpd-{httpdVersion}/srclib/apr-util
 
 wget https://ftp.pcre.org/pub/pcre/pcre-${PCRE}.tar.gz
 tar -xvzf pcre-${PCRE}.tar.gz
@@ -66,7 +66,7 @@ echo "Present working directory $(pwd)"
 echo "Building pcre" >> .build.log
 make clean && make install
 
-cd /${TARGET_DIR}/httpd-2.4.25/
+cd /${TARGET_DIR}/httpd-{httpdVersion}/
 
 echo "Building httpd" >> .build.log
 
