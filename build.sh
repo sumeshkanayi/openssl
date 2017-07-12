@@ -61,7 +61,7 @@ cd /${TARGET_DIR}
 yum install gcc-c++ zlib-devel -y
 
 echo "Installing GCC" >> .build.log
-cd /${TARGET_DIR}/pcre-${pcreVersion}
+cd /${TARGET_DIR}/pcre2-${pcreVersion}
 echo "Present working directory $(pwd)"
 ./configure --prefix /${TARGET_DIR}/pcre
 
