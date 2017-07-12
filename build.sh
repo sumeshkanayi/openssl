@@ -9,7 +9,7 @@ pcreVersion="10.23"
 openSSLversion="openssl-1.1.0f"
 aprUtilVersion="1.6.0"
 
-yum -y install wget perl gcc git subversion telnet
+yum -y install wget perl gcc git subversion telnet  expat-devel
 TARGET_DIR="build"
 if [ -d $TARGET_DIR ]; then
 rm -rf /${TARGET_DIR}
