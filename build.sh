@@ -36,9 +36,9 @@ cd /${TARGET_DIR}
 wget "http://redrockdigimark.com/apachemirror//httpd/httpd-${httpdVersion}.tar.gz"
 tar -xvzf "httpd-${httpdVersion}.tar.gz"
 cd /${TARGET_DIR}
-wget http://redrockdigimark.com/apachemirror//apr/apr-1.5.2.tar.gz
-tar -xvzf apr-1.5.2.tar.gz
-cp -r apr-1.5.2 "/${TARGET_DIR}/httpd-${httpdVersion}/srclib/apr"
+wget "http://redrockdigimark.com/apachemirror//apr/apr-${aprVersion}.tar.gz"
+tar -xvzf apr-${aprVersion}.tar.gz
+cp -r apr-${aprVersion} "/${TARGET_DIR}/httpd-${httpdVersion}/srclib/apr"
 
 echo "Download and copy aprutil" >> .build.log
 
