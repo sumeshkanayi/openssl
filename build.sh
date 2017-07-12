@@ -4,7 +4,9 @@
 # strings /etc/httpd/modules/mod_ssl.so | grep -i openssl
 #-----------------Usage----------------------
 echo "Do you want to delete exist"
-
+httpdVersion="2.4.27"
+arpVersion=
+pcreVersion=
 
 yum -y install wget perl gcc git subversion telnet
 TARGET_DIR="build"
