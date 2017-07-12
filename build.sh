@@ -3,12 +3,6 @@
 # sh builld.sh
 # strings /etc/httpd/modules/mod_ssl.so | grep -i openssl
 #-----------------Usage----------------------
-
-httpdVersion="2.4.27"
-aprVersion="1.6.2"
-pcreVersion="10.23"
-openSSLversion="1.1.0f"
-
 yum -y install wget perl gcc git subversion telnet
 TARGET_DIR="build"
 if [ -d $TARGET_DIR ]; then
