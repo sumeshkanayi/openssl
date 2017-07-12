@@ -73,7 +73,7 @@ echo "present ir is $(pwd)" >> /tmp/build.log
 
 make && make install
 
-ln -s /etc/httpd/bin/apachectl /usr/local/bin/apachectl
+ln -s /etc/httpd/bin/apachectl /usr/bin/apachectl
 
 echo "completee" >> .build.log
 
