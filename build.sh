@@ -7,6 +7,7 @@ httpdVersion="2.4.27"
 aprVersion="1.6.2"
 pcreVersion="10.23"
 openSSLversion="openssl-1.1.0f"
+aprUtilVersion="1.6.0"
 
 yum -y install wget perl gcc git subversion telnet
 TARGET_DIR="build"
@@ -42,9 +43,9 @@ cp -r apr-${aprVersion} "/${TARGET_DIR}/httpd-${httpdVersion}/srclib/apr"
 
 echo "Download and copy aprutil" >> .build.log
 
-wget http://redrockdigimark.com/apachemirror//apr/apr-util-1.5.4.tar.gz
-tar -xvzf apr-util-1.5.4.tar.gz
-cp -r apr-util-1.5.4 "/${TARGET_DIR}/httpd-${httpdVersion}/srclib/apr-util"
+wget http://redrockdigimark.com/apachemirror//apr/apr-util-${aprUtilVersion}.tar.gz
+tar -xvzf apr-util-${aprUtilVersion}.tar.gz
+cp -r apr-util-${aprUtilVersion} "/${TARGET_DIR}/httpd-${httpdVersion}/srclib/apr-util"
 
 wget https://ftp.pcre.org/pub/pcre/pcre-${pcreVersion}.tar.gz
 tar -xvzf pcre-${pcreVersion}.tar.gz
