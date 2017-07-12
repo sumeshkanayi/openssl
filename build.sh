@@ -47,7 +47,8 @@ wget http://redrockdigimark.com/apachemirror//apr/apr-util-${aprUtilVersion}.tar
 tar -xvzf apr-util-${aprUtilVersion}.tar.gz
 cp -r apr-util-${aprUtilVersion} "/${TARGET_DIR}/httpd-${httpdVersion}/srclib/apr-util"
 
-wget https://ftp.pcre.org/pub/pcre/pcre-${pcreVersion}.tar.gz
+wget https://ftp.pcre.org/pub/pcre/pcre2-${pcreVersion}.tar.gz
+
 tar -xvzf pcre-${pcreVersion}.tar.gz
 cd /${TARGET_DIR}/pcre-${pcreVersion}
 echo "Under PCRE"
