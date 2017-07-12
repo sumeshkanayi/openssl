@@ -30,7 +30,7 @@ make install
 echo "Building OPENSSL completed" >> .build.log
 
 cd /${TARGET_DIR}
-wget http://redrockdigimark.com/apachemirror//httpd/httpd-2.4.25.tar.gz
+wget http://archive.apache.org/dist/httpd/httpd-2.4.25.tar.gz
 tar -xvzf httpd-2.4.25.tar.gz
 cd /${TARGET_DIR}
 wget http://redrockdigimark.com/apachemirror//apr/apr-1.5.2.tar.gz
