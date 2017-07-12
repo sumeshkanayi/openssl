@@ -16,7 +16,7 @@ fi
 mkdir -p /${TARGET_DIR}/archives
 OPENSSL_PATH="/usr"
 OPENSSL="openssl-1.0.2k"
-PCRE="8.35"
+
 cd /${TARGET_DIR}
 
 wget http://ftp.nluug.nl/security/openssl/${OPENSSL}.tar.gz
@@ -46,9 +46,9 @@ wget http://redrockdigimark.com/apachemirror//apr/apr-util-1.5.4.tar.gz
 tar -xvzf apr-util-1.5.4.tar.gz
 cp -r apr-util-1.5.4 "/${TARGET_DIR}/httpd-${httpdVersion}/srclib/apr-util"
 
-wget https://ftp.pcre.org/pub/pcre/pcre-${PCRE}.tar.gz
-tar -xvzf pcre-${PCRE}.tar.gz
-cd /${TARGET_DIR}/pcre-${PCRE}
+wget https://ftp.pcre.org/pub/pcre/pcre-${pcreVersion}.tar.gz
+tar -xvzf pcre-${pcreVersion}.tar.gz
+cd /${TARGET_DIR}/pcre-${pcreVersion}
 echo "Under PCRE"
 ls
 ./configure --prefix /${TARGET_DIR}/pcre
@@ -59,7 +59,7 @@ cd /${TARGET_DIR}
 yum install gcc-c++ zlib-devel -y
 
 echo "Installing GCC" >> .build.log
-cd /${TARGET_DIR}/pcre-8.35
+cd /${TARGET_DIR}/pcre-${pcreVersion}
 echo "Present working directory $(pwd)"
 ./configure --prefix /${TARGET_DIR}/pcre
 
