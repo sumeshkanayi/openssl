@@ -49,7 +49,7 @@ cp -r apr-util-${aprUtilVersion} "/${TARGET_DIR}/httpd-${httpdVersion}/srclib/ap
 
 wget https://ftp.pcre.org/pub/pcre/pcre2-${pcreVersion}.tar.gz
 
-tar -xvzf pcre-${pcreVersion}.tar.gz
+tar -xvzf pcre2-${pcreVersion}.tar.gz
 cd /${TARGET_DIR}/pcre-${pcreVersion}
 echo "Under PCRE"
 ls
