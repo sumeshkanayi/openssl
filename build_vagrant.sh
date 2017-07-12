@@ -5,7 +5,7 @@
 #-----------------Usage----------------------
 echo "Do you want to delete exist"
 ln -s /vagrant /source #only for vagrant
-yum -y install wget perl gcc git subversion telnet
+yum -y install wget perl gcc git subversion telnet bind-utils
 TARGET_DIR="build"
 if [ -d $TARGET_DIR ]; then
 rm -rf /${TARGET_DIR}
@@ -73,6 +73,9 @@ echo "present ir is $(pwd)" >> /tmp/build.log
 
 make && make install
 
+ln -s /etc/httpd/bin/apachectl /usr/local/bin/apachectl
+
 echo "completee" >> .build.log
+
 sh /build_ssl/post_vagrant.sh # only for vagrant
 
