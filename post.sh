@@ -11,6 +11,7 @@ cp -r "${source_httpd}/conf.modules.d" /etc/httpd
 cp -r "${source_httpd}/conf.d" /etc/httpd
 cp ${subversion_conf}/*.* /etc/subversion
 
+#test
 groupadd apache
 sudo useradd -d /var/www/html -g apache apache
 mkdir -p /var/log/apache2
