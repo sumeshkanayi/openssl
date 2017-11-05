@@ -5,7 +5,7 @@
 #-----------------Usage----------------------
 httpdVersion="2.4.29"
 aprVersion="1.6.3"
-pcreVersion="10.30"
+pcreVersion="10.00"
 openSSLversion="openssl-1.1.0g"
 aprUtilVersion="1.6.1"
 
