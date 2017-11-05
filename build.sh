@@ -7,7 +7,7 @@ httpdVersion="2.4.29"
 aprVersion="1.6.3"
 pcreVersion="10.30"
 openSSLversion="openssl-1.1.0g"
-aprUtilVersion="1.6."
+aprUtilVersion="1.6.1"
 
 yum -y install wget perl gcc git subversion telnet  expat-devel
 TARGET_DIR="build"
