@@ -25,9 +25,9 @@ OPENSSL_PATH="/usr"
 cd /${TARGET_DIR}
 git submodule update --init --recursive
 
-wget http://ftp.nluug.nl/security/openssl/${openSSLversion}.tar.gz
+#wget http://ftp.nluug.nl/security/openssl/${openSSLversion}.tar.gz
 
-tar -xvzf ${openSSLversion}.tar.gz
+#tar -xvzf ${openSSLversion}.tar.gz
 mv *.gz /${TARGET_DIR}/archives
 mkdir -p /${TARGET_DIR}/apps
 cd ${openSSLversion}
