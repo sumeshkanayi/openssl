@@ -10,7 +10,7 @@
 httpdVersion="2.4.29"
 aprVersion="1.6.3"
 pcreVersion="8.41"
-openSSLversion="openssl-1.1.0g"
+#openSSLversion="openssl-1.1.0g"
 aprUtilVersion="1.6.1"
 
 yum -y install wget perl gcc git subversion telnet expat-devel pcre-devel
@@ -30,13 +30,13 @@ git submodule update --init --recursive
 #tar -xvzf ${openSSLversion}.tar.gz
 mv *.gz /${TARGET_DIR}/archives
 mkdir -p /${TARGET_DIR}/apps
-cd ${openSSLversion}
-./config --prefix=/${OPENSSL_PATH} no-threads shared
-echo "Building OPENSSL" >> .build.log
-make clean
-make test
-make install
-echo "Building OPENSSL completed" >> .build.log
+#cd ${openSSLversion}
+#./config --prefix=/${OPENSSL_PATH} no-threads shared
+#echo "Building OPENSSL" >> .build.log
+#make clean
+#make test
+#make install
+#echo "Building OPENSSL completed" >> .build.log
 
 cd /${TARGET_DIR}
 wget "http://redrockdigimark.com/apachemirror//httpd/httpd-${httpdVersion}.tar.gz"
