@@ -6,7 +6,7 @@
 # stop apache first
 # take a backup of /etc/httpd
 # then run the script
-
+apachectl stop
 httpdVersion="2.4.29"
 aprVersion="1.6.3"
 pcreVersion="8.41"
