@@ -19,7 +19,7 @@ if [ -d $TARGET_DIR ]; then
 rm -rf /${TARGET_DIR}
 fi
 mkdir -p /${TARGET_DIR}/archives
-OPENSSL_PATH="/usr/local/ssl"
+OPENSSL_PATH="/usr/local"
 
 
 cd /${TARGET_DIR}
