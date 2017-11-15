@@ -78,7 +78,7 @@ cd "/${TARGET_DIR}/httpd-${httpdVersion}/"
 echo "Building httpd" >> .build.log
 
 echo "present ir is $(pwd)" >> /tmp/build.log
-./configure --prefix=/etc/httpd --with-ssl=${OPENSSL_PATH}/ssl --enable-ssl=shared --enable-mods-shared=all --with-included-apr --with-pcre=/${TARGET_DIR}/pcre/bin/pcre2-config --enable-suexec --enable-mpms-shared=all --enable-systemd --enable-cgi   
+./configure --prefix=/etc/httpd --with-ssl=${OPENSSL_PATH}/ssl --enable-ssl --enable-mods-shared=all --with-included-apr --with-pcre=/${TARGET_DIR}/pcre/bin/pcre2-config --enable-suexec --enable-mpms-shared=all --enable-systemd --enable-cgi   
 
 
 make && make install
