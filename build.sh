@@ -10,7 +10,7 @@ apachectl stop
 httpdVersion="2.4.29"
 aprVersion="1.6.3"
 pcreVersion="8.41"
-#openSSLversion="openssl-1.1.0g"
+openSSLversion="openssl-1.1.0g"
 aprUtilVersion="1.6.1"
 
 yum -y install wget perl gcc git subversion telnet expat-devel pcre-devel
@@ -19,24 +19,24 @@ if [ -d $TARGET_DIR ]; then
 rm -rf /${TARGET_DIR}
 fi
 mkdir -p /${TARGET_DIR}/archives
-OPENSSL_PATH="/usr/local"
+OPENSSL_PATH="/usr"
 
 
 cd /${TARGET_DIR}
 git submodule update --init --recursive
 
-#wget http://ftp.nluug.nl/security/openssl/${openSSLversion}.tar.gz
+wget http://ftp.nluug.nl/security/openssl/${openSSLversion}.tar.gz
 
-#tar -xvzf ${openSSLversion}.tar.gz
+tar -xvzf ${openSSLversion}.tar.gz
 mv *.gz /${TARGET_DIR}/archives
 mkdir -p /${TARGET_DIR}/apps
-#cd ${openSSLversion}
-#./config --prefix=/${OPENSSL_PATH} no-threads shared
-#echo "Building OPENSSL" >> .build.log
-#make clean
-#make test
-#make install
-#echo "Building OPENSSL completed" >> .build.log
+cd ${openSSLversion}
+./config --prefix=/${OPENSSL_PATH} no-threads shared
+echo "Building OPENSSL" >> .build.log
+make clean
+make test
+make install
+echo "Building OPENSSL completed" >> .build.log
 
 cd /${TARGET_DIR}
 wget "http://redrockdigimark.com/apachemirror//httpd/httpd-${httpdVersion}.tar.gz"
@@ -78,7 +78,7 @@ cd "/${TARGET_DIR}/httpd-${httpdVersion}/"
 echo "Building httpd" >> .build.log
 
 echo "present ir is $(pwd)" >> /tmp/build.log
-./configure --prefix=/etc/webserver --with-ssl=${OPENSSL_PATH}/ssl --enable-ssl=shared  --enable-mods-shared=all --with-included-apr --with-pcre=/${TARGET_DIR}/pcre/bin/pcre2-config --enable-suexec --enable-mpms-shared=all --enable-systemd --enable-cgi   
+./configure --prefix=/etc/httpd --with-ssl=${OPENSSL_PATH}/ssl --enable-ssl=shared --enable-mods-shared=all --with-included-apr --with-pcre=/${TARGET_DIR}/pcre/bin/pcre2-config --enable-suexec --enable-mpms-shared=all --enable-systemd --enable-cgi   
 
 
 make && make install
@@ -86,4 +86,3 @@ ln -s /etc/httpd/bin/apachectl /usr/bin/apachectl
 ln -s /$TARGET_DIR/testssl.sh/testssl.sh  /usr/bin/testssl.sh
 
 echo "completee" >> .build.log
-
